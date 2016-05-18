@@ -17,4 +17,21 @@ class GettingStartedSpec extends Specification {
         5   | 120
         10  | 3628800
     }
+
+    def "it should calculate #expected as fibonacci of #n"(){
+        expect:
+        GettingStarted.fibonacci(n) == expected
+
+        where:
+        n   | expected
+        0   | 0
+        1   | 1
+        2   | 1
+        3   | 2
+        4   | 3
+        5   | 5
+        6   | 8
+        10  | 55
+
+    }
 }
